@@ -1,0 +1,9 @@
+@media screen and (max-width:1200px) {
+    #dESKTOP_nAV{
+        display: none;
+    }
+
+    #hAMBURGER_nAV{
+        display: flex;
+    }
+}
