@@ -1,6 +1,6 @@
 function toggleMenu(){
-    const manu = document.querySelector(".mENU_lINKS");
-    const icon = document.querySelector(".hAMBURGER_iCON");
+    const manu = document.querySelector(".Manu_Links");
+    const icon = document.querySelector(".Hamburger_Icon");
     manu.classList.toggle("open");
     icon.classList.toggle("open");
 

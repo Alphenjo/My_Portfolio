@@ -15,11 +15,11 @@ html {
 p {
     color: rgb(85, 85, 85);
 }
-.sECTION_pICTURE_eDIT{
+.Section_Picture_Edit{
     width: 400px;
     border-radius: 200px 200px;
 }
-.sECTION_pICTURE_eDIT {
+.Section_Picture_Edit {
     position: relative;
     animation: slideRight 1.5s ease-out forwards;
     opacity: 0; 
@@ -39,13 +39,13 @@ p {
 
 /*tRANSITION*/
 
-a, .btn {
+a, .Btn {
     transition: all 300ms ease;
 }
 /*nAVIGATION*/
 
 nav, 
-.nAV_lINKS{
+.Nav_Links{
     display: flex;
     justify-content: space-between;
 }
@@ -53,13 +53,13 @@ nav {
     align-items: center;
     height: 15vh;
 }
-.nAV_lINKS {
+.Nav_Links {
     gap: 1.5rem;
     list-style: none;
     font-size: 2rem;
     padding-right: 30px;
 }
-.lINKS{
+.Links{
     color: rgb(53, 53, 53);
     display: inline-block;
     padding: 10px 16px;
@@ -70,7 +70,7 @@ nav {
     text-decoration-line: none;
     text-shadow: #4c00ff;
 }
-.lINKS_1{
+.Link_1{
     color: rgb(4, 0, 255);
     display: inline-block;
     padding: 10px 16px;
@@ -81,23 +81,23 @@ nav {
     text-decoration-line: none;
     text-shadow: #4c00ff;
 }
-.lINKS:hover,.lINKS_1:hover{
+.Links:hover,.Link_1:hover{
     color: #4c00ff;
     border-bottom: 3px solid #4c00ff;
     transform: scale(1.1);
 }
-.lOGO {
+.Logo {
     width: 100px;
     padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 20px;
     transition: 0.5s ease;
 }
-.lOGO:hover{
+.Logo:hover{
     transform: scale(1.1);
     cursor: none;
 }
-#dESKTOP_nAV{
+#Desktop_Nav{
     position: sticky;
     display: flex;
     justify-content: space-between;
@@ -110,15 +110,15 @@ nav {
 }
 /*hAMBURGER_mANU*/
 
-#hAMBURGER_nAV{
+#Hamburger_Nav{
     display: none;
     padding-right: 50px;
 }
-.hAMBURGER_mANU{
+.Hamburger_Manu{
     position: relative;
     display: inline-block;
 }
-.hAMBURGER_iCON{
+.Hamburger_Icon{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -126,13 +126,13 @@ nav {
     width: 30px;
     cursor: pointer;
 }
-.hAMBURGER_iCON span{
+.Hamburger_Icon span{
     width: 100%;
     height: 2px;
     background-color: #1f1f1f;
     transition: all 0.3 ease-in-out;
 }
-.mENU_lINKS{
+.Manu_Links{
     position: absolute;
     top: 100%;
     right: 0%;
@@ -142,7 +142,7 @@ nav {
     overflow: hidden;
     transition: all 0.3 ease-in-out;
 }
-.mENU_lINKS a {
+.Manu_Links a {
     display: block;
     padding: 10px;
     text-align: center;
@@ -151,28 +151,28 @@ nav {
     text-decoration: none;
     transition: all 0.3 ease-in-out;
 }
-.mENU_lINKS li {
+.Manu_Links li {
     list-style: none;
 }
-.mENU_lINKS.open{
+.Manu_Links.open{
     max-height: 300px;
 }
-.hAMBURGER_iCON.open span:first-child{
+.Hamburger_Icon.open span:first-child{
     transform: rotate(45deg) translate(10px, 5px);
 }
-.hAMBURGER_iCON.open span:nth-child(2){
+.Hamburger_Icon.open span:nth-child(2){
     opacity: 0;
 }
-.hAMBURGER_iCON.open span:last-child{
+.Hamburger_Icon.open span:last-child{
     transform: rotate(-45deg) translate(10px, -5px);
 }
-.hAMBURGER_iCON span:first-child{
+.Hamburger_Icon span:first-child{
     transform: none;
 }
-.hAMBURGER_iCON span:first-child{
+.Hamburger_Icon span:first-child{
     opacity: 1;
 }
-.hAMBURGER_iCON span:first-child{
+.Hamburger_Icon span:first-child{
     transform: none;
 }
 /*sECTIONS*/
@@ -184,23 +184,21 @@ section{
     box-sizing: border-box;
     min-height: fit-content;
 }
-.sECTION_cONTAINER{
-    display: flex;
-}
+
 /*pROFILE*/
 
-#pROFILE{
+#Profile{
     display: flex;
     justify-content: center;
     gap: 7rem;
 }
-.sIGN{
+.Sign{
     
     display: grid;
     place-items: auto ;
     justify-content: space-around;
 }
-#sIGNATURE {
+#Signature {
     stroke-dasharray: 2539;
     stroke-dashoffset: 2539;
     animation: 2.5s sign linear forwards;
@@ -213,20 +211,20 @@ section{
         stroke-dashoffset: 0;
     }
 }
-.sECTION_tEXT_p1{
+.Section_Text_P1{
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
 }
-.sECTION_tEXT_p2{
+.Section_Text_P2{
     font-size: 2rem;
 }
-.sOICAL_cONTAINER{
+.Social_Container{
     display: flex;
     margin-top: 1rem;
     gap: 1rem;
 }
-.iCON{
+.Icon{
     cursor: pointer;
     height: 2.5rem;
     transition: 0.5s ease;
@@ -236,39 +234,39 @@ section{
     border-bottom: 3px solid transparent;
     justify-content: space-between;
 }
-.iCON:hover{
+.Icon:hover{
     color: #4c00ff;
     border-bottom: 3px solid #4c00ff;
     transform: scale(1.1);
     
 }
-.bTN_cONTAINER{
+.Btn_Container{
     display: flex;
     gap: 1rem;
 }
-.bTN{
+.Btn{
     font-weight: 700;
     transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
 }
-.bTN_cOLOUR-1, .bTN_cOLOUR-2{
+.Btn_Colour-1, .Btn_Colour-2{
     border: rgb(53, 53, 53) 0.1rem solid;
 }
-.bTN_cOLOUR-1:hover, .bTN_cOLOUR-2:hover{
+.Btn_Colour-1:hover, .Btn_Colour-2:hover{
     cursor: pointer;
 }
-.bTN_cOLOUR-1, .bTN_cOLOUR-2:hover{
+.Btn_Colour-1, .Btn_Colour-2:hover{
     background: rgb(53, 53, 53);
     color: white;
 }
-.bTN_cOLOUR-1:hover{
+.Btn_Colour-1:hover{
     background: rgb(0, 0, 0);
 }
-.bTN_cOLOUR-2{
+.Btn_Colour-2{
     background: none;
 }
-.bTN_cOLOUR-2:hover{
+.Btn_Colour-2:hover{
     border: rgb(255, 255, 255) 0.1rem solid;
 }
