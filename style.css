@@ -108,6 +108,7 @@ nav {
     left: 0;
     z-index: 999;
 }
+
 /*hAMBURGER_mANU*/
 
 #Hamburger_Nav{
@@ -175,18 +176,19 @@ nav {
 .Hamburger_Icon span:first-child{
     transform: none;
 }
-/*sECTIONS*/
 
-section{
+/*Profile*/
+
+.Profile{
     padding-top: 4vh;
     height: 96vh;
     margin: 0 20rem;
     box-sizing: border-box;
     min-height: fit-content;
 }
-
-/*pROFILE*/
-
+.Section_Container{
+    display: flex;
+}
 #Profile{
     display: flex;
     justify-content: center;
@@ -269,4 +271,27 @@ section{
 }
 .Btn_Colour-2:hover{
     border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+/*About*/
+
+.About{
+    margin: 0 20rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.About_Text_P1{
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+.About_Title{
+    font-size: 3rem;
+    text-align: center;
+}
+.About-Image{
+    width: 400px;
+}
+.About-Container{
+    display: flex;
 }
