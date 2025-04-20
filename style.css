@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/*gENERAL*/
+/*GENERAL*/
 
 *{
     margin: 0;
@@ -15,6 +15,9 @@ html {
 p {
     color: rgb(85, 85, 85);
 }
+a, .button {
+    transition: all 300ms ease;
+}
 .Section_Picture_Edit{
     width: 400px;
     border-radius: 200px 200px;
@@ -24,9 +27,23 @@ p {
     animation: slideRight 1.5s ease-out forwards;
     opacity: 0; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 10);
-  }
-  
-  @keyframes slideRight {
+}
+
+/*LOGO*/
+
+.logo {
+    width: 100px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+    cursor: none;
+}
+
+@keyframes slideRight {
     0% {
       left: -100px;
       opacity: 0;
@@ -35,31 +52,11 @@ p {
       left: 0;
       opacity: 1;
     }
-  }
+}
 
-/*tRANSITION*/
+/*LINKS*/
 
-a, .Btn {
-    transition: all 300ms ease;
-}
-/*nAVIGATION*/
-
-nav, 
-.Nav_Links{
-    display: flex;
-    justify-content: space-between;
-}
-nav {
-    align-items: center;
-    height: 15vh;
-}
-.Nav_Links {
-    gap: 1.5rem;
-    list-style: none;
-    font-size: 2rem;
-    padding-right: 30px;
-}
-.Links{
+.links{
     color: rgb(53, 53, 53);
     display: inline-block;
     padding: 10px 16px;
@@ -70,7 +67,7 @@ nav {
     text-decoration-line: none;
     text-shadow: #4c00ff;
 }
-.Link_1{
+.link_1{
     color: rgb(4, 0, 255);
     display: inline-block;
     padding: 10px 16px;
@@ -81,23 +78,50 @@ nav {
     text-decoration-line: none;
     text-shadow: #4c00ff;
 }
-.Links:hover,.Link_1:hover{
+.links:hover,.link_1:hover{
     color: #4c00ff;
     border-bottom: 3px solid #4c00ff;
     transform: scale(1.1);
 }
-.Logo {
-    width: 100px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    transition: 0.5s ease;
+
+.nav_links {
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 2rem;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
 }
-.Logo:hover{
-    transform: scale(1.1);
-    cursor: none;
+
+.manu_links{
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: #f0f0f5;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
 }
-#Desktop_Nav{
+.manu_links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: #1f1f1f;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.manu_links li {
+    list-style: none;
+}
+.manu_links.open{
+    max-height: 300px;
+}
+
+/*NAVIGATION*/
+
+#desktop_nav{
     position: sticky;
     display: flex;
     justify-content: space-between;
@@ -109,17 +133,25 @@ nav {
     z-index: 999;
 }
 
-/*hAMBURGER_mANU*/
+nav {
+    align-items: center;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
 
-#Hamburger_Nav{
+
+/*HAMBURGER_MANU*/
+
+#hamburger_nav{
     display: none;
     padding-right: 50px;
 }
-.Hamburger_Manu{
+.hamburger_manu{
     position: relative;
     display: inline-block;
 }
-.Hamburger_Icon{
+.hamburger_icon{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,65 +159,34 @@ nav {
     width: 30px;
     cursor: pointer;
 }
-.Hamburger_Icon span{
+.hamburger_icon span{
     width: 100%;
     height: 2px;
     background-color: #1f1f1f;
     transition: all 0.3 ease-in-out;
 }
-.Manu_Links{
-    position: absolute;
-    top: 100%;
-    right: 0%;
-    background-color: #f0f0f5;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3 ease-in-out;
-}
-.Manu_Links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1rem;
-    color: #1f1f1f;
-    text-decoration: none;
-    transition: all 0.3 ease-in-out;
-}
-.Manu_Links li {
-    list-style: none;
-}
-.Manu_Links.open{
-    max-height: 300px;
-}
-.Hamburger_Icon.open span:first-child{
+
+.hamburger_icon.open span:first-child{
     transform: rotate(45deg) translate(10px, 5px);
 }
-.Hamburger_Icon.open span:nth-child(2){
+.hamburger_icon.open span:nth-child(2){
     opacity: 0;
 }
-.Hamburger_Icon.open span:last-child{
+.hamburger_icon.open span:last-child{
     transform: rotate(-45deg) translate(10px, -5px);
 }
-.Hamburger_Icon span:first-child{
+.hamburger_icon span:first-child{
     transform: none;
 }
-.Hamburger_Icon span:first-child{
+.hamburger_icon span:first-child{
     opacity: 1;
 }
-.Hamburger_Icon span:first-child{
+.hamburger_icon span:first-child{
     transform: none;
 }
 
 /*Profile*/
 
-.Profile{
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 20rem;
-    box-sizing: border-box;
-    min-height: fit-content;
-}
 .Section_Container{
     display: flex;
 }
@@ -193,6 +194,11 @@ nav {
     display: flex;
     justify-content: center;
     gap: 7rem;
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 20rem;
+    box-sizing: border-box;
+    min-height: fit-content;
 }
 .Sign{
     
