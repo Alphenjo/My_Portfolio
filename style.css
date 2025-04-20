@@ -18,15 +18,53 @@ p {
 a, .button {
     transition: all 300ms ease;
 }
-.Section_Picture_Edit{
+.home_page_picture_edit{
     width: 400px;
     border-radius: 200px 200px;
-}
-.Section_Picture_Edit {
     position: relative;
     animation: slideRight 1.5s ease-out forwards;
     opacity: 0; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 10);
+}
+.sign{
+    
+    display: grid;
+    place-items: auto ;
+    justify-content: space-around;
+}
+#signature {
+    stroke-dasharray: 2539;
+    stroke-dashoffset: 2539;
+    animation: 2.5s sign linear forwards;
+}
+@keyframes sign {
+    0% {
+        stroke-dashoffset: 2539;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/*NAVIGATION*/
+
+#desktop_nav{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+nav {
+    align-items: center;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*LOGO*/
@@ -52,6 +90,25 @@ a, .button {
       left: 0;
       opacity: 1;
     }
+}
+
+/*ICONS*/
+
+.icon{
+    cursor: pointer;
+    height: 2.5rem;
+    transition: 0.5s ease;
+    margin-top: 1rem;
+    gap: 1rem;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    justify-content: space-between;
+}
+.icon:hover{
+    color: #4c00ff;
+    border-bottom: 3px solid #4c00ff;
+    transform: scale(1.1);
+    
 }
 
 /*LINKS*/
@@ -119,28 +176,6 @@ a, .button {
     max-height: 300px;
 }
 
-/*NAVIGATION*/
-
-#desktop_nav{
-    position: sticky;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
-
-nav {
-    align-items: center;
-    height: 15vh;
-    display: flex;
-    justify-content: space-between;
-}
-
-
 /*HAMBURGER_MANU*/
 
 #hamburger_nav{
@@ -165,7 +200,6 @@ nav {
     background-color: #1f1f1f;
     transition: all 0.3 ease-in-out;
 }
-
 .hamburger_icon.open span:first-child{
     transform: rotate(45deg) translate(10px, 5px);
 }
@@ -187,10 +221,8 @@ nav {
 
 /*Profile*/
 
-.Section_Container{
-    display: flex;
-}
-#Profile{
+
+#home_page{
     display: flex;
     justify-content: center;
     gap: 7rem;
@@ -200,104 +232,71 @@ nav {
     box-sizing: border-box;
     min-height: fit-content;
 }
-.Sign{
-    
-    display: grid;
-    place-items: auto ;
-    justify-content: space-around;
-}
-#Signature {
-    stroke-dasharray: 2539;
-    stroke-dashoffset: 2539;
-    animation: 2.5s sign linear forwards;
-}
-@keyframes sign {
-    0% {
-        stroke-dashoffset: 2539;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-.Section_Text_P1{
+
+.home_page_text_p1{
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
 }
-.Section_Text_P2{
+.home_page_text_p2{
     font-size: 2rem;
 }
-.Social_Container{
-    display: flex;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-.Icon{
-    cursor: pointer;
-    height: 2.5rem;
-    transition: 0.5s ease;
-    margin-top: 1rem;
-    gap: 1rem;
-    font-weight: bold;
-    border-bottom: 3px solid transparent;
-    justify-content: space-between;
-}
-.Icon:hover{
-    color: #4c00ff;
-    border-bottom: 3px solid #4c00ff;
-    transform: scale(1.1);
-    
-}
-.Btn_Container{
+
+.home_page_button_container{
     display: flex;
     gap: 1rem;
 }
-.Btn{
+.button{
     font-weight: 700;
     transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
 }
-.Btn_Colour-1, .Btn_Colour-2{
+.home_page_button_colour_1, .home_page_button_colour_2{
     border: rgb(53, 53, 53) 0.1rem solid;
 }
-.Btn_Colour-1:hover, .Btn_Colour-2:hover{
+.home_page_button_colour_1:hover, .home_page_button_colour_2:hover{
     cursor: pointer;
 }
-.Btn_Colour-1, .Btn_Colour-2:hover{
+.home_page_button_colour_1, .home_page_button_colour_2:hover{
     background: rgb(53, 53, 53);
     color: white;
 }
-.Btn_Colour-1:hover{
+.home_page_button_colour_1:hover{
     background: rgb(0, 0, 0);
 }
-.Btn_Colour-2{
+.home_page_button_colour_2{
     background: none;
 }
-.Btn_Colour-2:hover{
+.home_page_button_colour_2:hover{
     border: rgb(255, 255, 255) 0.1rem solid;
 }
 
 /*About*/
 
-.About{
+#about_page{
     margin: 0 20rem;
     box-sizing: border-box;
     min-height: fit-content;
 }
-.About_Text_P1{
+.about_page_text_p1{
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
 }
-.About_Title{
+.about_page_heading{
     font-size: 3rem;
     text-align: center;
 }
-.About-Image{
+.about_page_section_container{
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.about_page_image{
     width: 400px;
 }
-.About-Container{
-    display: flex;
+.about_container{
+    
 }
