@@ -276,9 +276,24 @@ nav {
 /*About*/
 
 #about_page{
+    position: relative;
     margin: 0 20rem;
-    box-sizing: border-box;
-    min-height: fit-content;
+}
+.about_page_image{
+    border-radius: 2rem;
+}
+.about_container{
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.about_page_details_container{
+    justify-content: center;
+    flex-direction: column;
+}
+.about_container,
+.about_page_details_container{
+    display: flex;
 }
 .about_page_text_p1{
     font-size: 1rem;
@@ -289,14 +304,22 @@ nav {
     font-size: 3rem;
     text-align: center;
 }
+.next_button{
+    position: absolute;
+    right: -3rem;
+    bottom: 2rem;
+}
 .about_page_section_container{
     display: flex;
     margin-top: 1rem;
     gap: 1rem;
 }
-.about_page_image{
-    width: 400px;
+.details_container{
+    background-color: #f8fbff;
+    color: black;
+    text-align: center;
+    padding: 5px;
 }
-.about_container{
-    
+.details_container:hover{
+    background-color: cyan;
 }
