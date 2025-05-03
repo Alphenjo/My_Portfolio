@@ -299,6 +299,7 @@ nav {
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
+    color: black;
 }
 .about_page_heading{
     font-size: 3rem;
@@ -315,11 +316,38 @@ nav {
     gap: 1rem;
 }
 .details_container{
-    background-color: #f8fbff;
     color: black;
     text-align: center;
     padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
 }
-.details_container:hover{
-    background-color: cyan;
+.details_container::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, blue, red);
+    height: 320%;
+    animation: rgBimg 3s linear infinite;
+    transition: all 0.2s linear;
+    top: -100%;
+    z-index: -1;
+}
+
+@keyframes rgBimg {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.details_container::after{
+    content: "";
+    position: absolute;
+    inset: 5px;
+    background: white;
+    border-radius: 5px;
+    z-index: -1;
 }
