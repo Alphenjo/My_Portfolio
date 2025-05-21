@@ -6,142 +6,576 @@
     <title>My_Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 <body>
-    <header>
-        <nav id="desktop_nav">
-            <div>
-                <a href="#mAIN_pAGE"><img src="Assets/Logo.png" class="logo"></a>
-            </div>
-            <div>
-                <ul class="nav_links">
-                    <li>
-                        <a href="#home_page" class="link_1">HOME</a>
-                    </li>
-                    <li>
-                        <a href="#about_page" class="links">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="#insights" class="links">INSIGHTS</a>
-                    </li>
-                    <li>
-                        <a href="#pRECEPTORS" class="links">PRECEPTORS</a>
-                    </li>
-                    <li>
-                        <a href="#cONTECT" class="links">CONTACT</a>
-                    </li>
+        <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#home"><img src="Assets/Logo.png" class="logo"></a>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#insights" class="nav-link">Insights</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#preceptors" class="nav-link"> Preceptors </a></li>
                 </ul>
+                
+                <a href="#contact" class="btn">Contact Me</a>
             </div>
-        </nav>
-        <nav id="hamburger_nav">
-            <div>
-                <a href="#mAIN_pAGE">
-                    <img src="Assets/Logo.png" class="logo">
-                </a>
-            </div>
-            <div class="hamburger_manu">
-                <div class="hamburger_icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="manu_links">
-                    <li>
-                        <a href="#home_page" class="links" onclick="toggleMenu()">HOME</a>
-                    </li>
-                    <li>
-                        <a href="#about_page" class="links" onclick="toggleMenu()">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="#iNSIGHTS" class="links" onclick="toggleMenu()">INSIGHTS</a>
-                    </li>
-                    <li>
-                        <a href="#pRECEPTORS" class="links" onclick="toggleMenu()">PRECEPTORS</a>
-                    </li>
-                    <li>
-                        <a href="#cONTECT" class="links" onclick="toggleMenu()">CONTACT</a>
-                    </li>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section id="home_page">
-        <div class="home_page_picture">
-            <img src="./Assets/Sujoy_Sadhukhan.png" class="home_page_picture_edit" alt="Sujoy">
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <div class="home_page_text">
-            <p class="home_page_text_p1">
-                Hello I'm
-            </p>
-            <svg class="sign" width="460" height="460" viewBox="0 0 481 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Hello, I'm</p>
+                <svg class="sign"  viewBox="0 0 481 460" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="signature" d="M180.151 213.88C202.842 208.111 225.059 196.634 246.096 186.991C278.637 172.074 303.784 160.22 335.707 142.824C377.47 120.066 420.441 95.3201 454.151 61.1018C465.046 50.0432 485.27 25.2103 476.985 7.04627C475.681 4.18727 473.275 2.64199 470.151 2.32405C458.223 1.10982 444.241 3.57802 432.818 5.2685C350.533 17.446 267.868 39.9942 192.374 75.2129C155.373 92.4742 119.346 113.814 89.0403 141.38C76.3513 152.921 63.1548 166.766 58.1514 183.768C53.9717 197.972 58.3133 213.808 67.3181 225.102C77.4843 237.853 92.0269 246.374 106.707 252.991C136.766 266.539 168.95 274.635 200.818 282.546C214.561 285.958 235.656 290.607 250.096 294.768C254.18 295.945 266.376 298.608 269.485 303.88C272.89 309.655 258.676 318.973 256.262 320.768C223.153 345.399 181.807 358.269 143.151 371.102C100.85 385.145 56.3846 401.365 11.8181 406.657C7.9018 407.122 6.02445 406.775 2.70694 404.88C1.56274 404.226 2.15139 401.138 2.15139 400.102C2.15139 393.966 8.13614 391.86 12.9292 388.768C16.282 386.606 56.1601 361.432 57.9292 365.324C60.043 369.975 53.6216 384.979 61.6514 385.824C64.4124 386.115 65.818 384.221 67.1514 381.991C72.051 373.795 76.2612 364.66 80.2625 355.991C81.0675 354.247 82.1514 348.625 82.1514 350.546C82.1514 353.071 82.0804 355.499 81.5958 357.991C80.521 363.519 79.6064 371.399 85.9292 364.991C91.6945 359.147 97.4077 353.654 102.207 346.935C104.561 343.639 105.151 342.781 105.151 347.046C105.151 351.197 104.416 355.416 104.596 359.546C104.805 364.348 110.348 358.05 111.485 356.991C114.701 353.994 118.913 356.474 121.596 351.491C122.154 350.455 122.219 349.848 122.151 351.546C121.768 361.122 117.252 369.612 112.874 377.935C102.728 397.222 91.1883 416.001 84.4847 436.88C82.4074 443.349 81.1514 463.786 81.1514 456.991C81.1514 435.974 88.3554 413.673 96.2069 394.324C99.2012 386.945 103.447 381.2 108.485 375.102C110.793 372.308 112.806 368.645 115.929 366.657C116.537 366.271 117.55 369.858 117.818 370.268C119.354 372.623 122.782 373.293 125.374 373.657C138.572 375.513 145.374 357.52 145.985 346.824C146.052 345.651 145.818 343.684 144.151 343.88C142.58 344.064 142.522 349.547 142.374 350.657C141.246 359.112 147.099 346.47 150.485 344.213C157.693 339.408 156.151 347.573 156.151 352.268C156.151 354.125 155.185 358.984 157.818 359.657C161.125 360.503 163.587 360.028 164.374 356.657C165.069 353.676 166.34 350.802 168.54 348.602C168.981 348.161 170.767 347.809 170.54 347.991C168.275 349.803 167.357 354.477 166.262 356.88C157.775 375.508 143.268 390.18 131.596 406.768C122.527 419.658 113.019 433.632 107.54 448.546C104.989 455.493 111.493 443.762 113.262 442.046C125.008 430.657 137.696 420.361 150.429 410.102C190.496 377.82 231.901 347.127 275.151 319.213C319.714 290.452 366.042 264.801 413.485 241.157C429.941 232.956 447.05 225.804 463.374 217.324C467.351 215.258 466.151 217.334 466.151 220.935C466.151 226.167 462.417 224.88 458.151 224.88" stroke="black" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-            <h1 class="home_page_name">
-                Sujoy
-            </h1>
-            <p class="home_page_text_p2">
-                A Professional Gamer and Frontend Developer
-            </p>
-            <div id="home_page_social_container">
-                <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="icon" onclick="window.open('https://www.linkedin.com/in/sujoy-sadhukhan-321971360/')">
-                <img src="./Assets/github_image.png" alt="Github Profile" class="icon" onclick="window.open('https://github.com/Alphenjo/')">
-                <img src="./Assets/youtube_image.png" alt="Youtube Channel" class="icon" onclick="window.open('https://www.youtube.com/@alphenjo9339')">
-                <img src="./Assets/instagram_image.png" alt="Instagram Id" class="icon" onclick="window.open('https://www.instagram.com/alphenjo9339321/')">
-                <img src="./Assets/discord_image.png" alt="Discord Server" class="icon" onclick="window.open('https://discord.com/channels/1034142040260362251/1034142040876912712')">
+                </svg>
+                <h1 class="hero-title">Sujoy</h1>
+                <div class="hero-ntitle">
+                    <p>Hello I'm <H1>Sujoy</H1></p>
+                </div>
+                <p class="hero-description">
+                    A Professional Gamer and Frontend Developer
+                </p>
+                <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/sujoy-sadhukhan-321971360/')">
+                <img src="./Assets/github_image.png" alt="Github Profile" class="social-link" onclick="window.open('https://github.com/Alphenjo/')">
+                <img src="./Assets/youtube_image.png" alt="Youtube Channel" class="social-link" onclick="window.open('https://www.youtube.com/@alphenjo9339')">
+                <img src="./Assets/instagram_image.png" alt="Instagram Id" class="social-link" onclick="window.open('https://www.instagram.com/alphenjo9339321/')">
+                <img src="./Assets/discord_image.png" alt="Discord Server" class="social-link" onclick="window.open('https://discord.com/channels/1034142040260362251/1034142040876912712')">
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
             </div>
-            <div class="home_page_button_container">
-                <button class="button home_page_button_colour_2" onclick="window.open('./Assets/CV_Sujoy.pdf')">
-                    Download CV
-                </button>
-                <button class="button home_page_button_colour_1" onclick="location.href='./#cONTECT'">
-                    Contact Info
-                </button>
+            
+            <div class="hero-image">
+                <img src="./Assets/Sujoy_Sadhukhan.png" alt="Sujoy" class="hero-img">
             </div>
         </div>
     </section>
-    <section id="about_page">
-        <p class="about_page_text_p1">
-            Get to know more
-        </p>
-        <h1 class="about_page_heading">
-            About me
-        </h1>
-        <div class="about_page_section_container">
-            <div class="about_page_section_image_container">
-                <img src="./Assets/About_Image.jpg" alt="Profile Picture" class="about_page_image">
-            </div>
-            <div class="about_page_details_container">
-                <div class="about_container">
-                    <div class="details_container">
-                        <img src="./Assets/experience_icon.png" alt="Experience Icon" class="icon">
-                        <br>
-                        <h3>
-                            Experience
-                        </h3>
-                        <p>Now Studying at college <br>without any professional experience</p>
-                        <br>
-                    </div>
-                    <div class="details_container">
-                        <img src="./Assets/education_icon.png" alt="Education Icon" class="icon">
-                        <br>
-                        <h3>
-                            Education
-                        </h3>
-                        <p>
-                            Bachelor of Computer Application (ongoing) <br> Frontend Developer
-                        </p>
-                        <br>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <img src="Assets\About_Image.jpg" alt="About Me" class="about-image">
                     </div>
                 </div>
-                <div class="text_container">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sint minima illo ullam tempore nam temporibus facere beatae, sequi molestiae eaque necessitatibus unde fuga delectus aut saepe sapiente, quibusdam vero excepturi. Molestiae consectetur corporis doloremque aut expedita eaque sequi, eos saepe rerum laudantium minima, corrupti explicabo ratione placeat alias praesentium.
+                
+                <div class="about-content">
+                    <h3 class="about-heading">A Student &amp; Gamer</h3>
+                    <p class="about-text">
+                        Education and Experience: I'm Sujoy Sadhukhan, currently pursuing a BCA at Eminent College of Management and Technology, aiming for a Data Science career. My academic foundation includes a 70.86% in 10th and 76.8% in 12th grade from Gobardanga Khantura High School.
+                    </p>
+                    <p class="about-text">
+                        Gaming Experience: I'm also a highly skilled gamer, consistently ranking among top players in competitive games like Destiny 2, Warframe, CS:GO, Call of Duty, and BGMI (PUBG). My gaming skills demonstrate strategic thinking and problem-solving abilities.
+                    </p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Date of Birth</span>
+                                December 30, 2005
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Email</span>
+                                alphenjo9339321@gmail.com
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Phone</span>
+                                +91 76790 12265
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Location</span>
+                                North 24 Parganas, WB
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a onclick="window.open('Assets/CV_Sujoy.pdf')" class="btn">Download CV</a>
+                    <a onclick="window.open('Assets/Resume_Sujoy.pdf')" class="btn">Download Resume</a>
+                    
+                    <div class="skills">
+                        <h3 class="skills-title">My Skills</h3>
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML &amp; CSS</span>
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">52%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 52%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">62%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 62%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C++</span>
+                                    <span class="skill-percent">58%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 58%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insight Section -->
+    <section class="section insights" id="insights">
+        <div class="container">
+            <h2 class="section-title">Insights</h2>
+            
+            <div class="insights-container">
+                <div class="insights-card">
+                    <div class="insights-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="insights-title">Web Development</h3>
+                    <p class="insights-description">
+                        Web development is the creation of websites and web apps using technologies like HTML, CSS, JavaScript, and backend tools. It blends design and logic to deliver responsive, user-friendly digital experiences.
+                    </p>
+                </div>
+                
+                <div class="insights-card">
+                    <div class="insights-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <h3 class="insights-title">Education</h3>
+                    <p class="insights-description">
+                        Focus on building a strong foundation in core subjects like math, computer science, and communication. Combine formal education with practical skills through projects, internships, and continuous self-learning to stay ahead.
+                    </p>
+                </div>
+                
+                <div class="insights-card">
+                    <div class="insights-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="insights-title">Technology</h3>
+                    <p class="insights-description">
+                        Using technology in education enhances learning through interactive tools, virtual labs, and real-time collaboration. It bridges theory and practice, making concepts more engaging and helping students apply knowledge in real-world scenarios.
+                    </p>
+                </div>
+                
+                <div class="insights-card">
+                    <div class="insights-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="insights-title">Problem Solving</h3>
+                    <p class="insights-description">
+                        Develop problem-solving skills by breaking down complex issues into smaller steps and analyzing them logically. Practice regularly through puzzles, coding challenges, and real-life scenarios to build confidence and adaptability.
+                    </p>
+                </div>
+                
+                <div class="insights-card">
+                    <div class="insights-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="insights-title">Critical Thinking</h3>
+                    <p class="insights-description">
+                        Critical thinking involves analyzing information objectively, questioning assumptions, and making reasoned decisions. Strengthen it by evaluating different perspectives, asking “why,” and supporting conclusions with evidence.
+                    </p>
+                </div>
+                
+                <div class="insights-card">
+                    <div class="insights-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="insights-title">Performance Building</h3>
+                    <p class="insights-description">
+                        To improve performance, set clear goals, track your progress, and seek feedback regularly. Stay consistent, focus on learning from mistakes, and adopt healthy habits like time management and self-discipline.
                     </p>
                 </div>
             </div>
         </div>
-        <img src="./Assets/Next_Button.png" alt="Next" class="next_button" onclick="location.href='./#insights'">
     </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="app">App Development</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+            </div>
+            
+            <div class="portfolio-container">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img" style="background-color: #ea5455; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-shopping-cart" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">E-Commerce Website</h3>
+                        <p class="portfolio-category">Web Design</p>
+                        <p style="color: white;">(Content in Progress)</p>
+                        <div class="portfolio-btns">
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img" style="background-color: #f07b3f; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-mobile-alt" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Weather App</h3>
+                        <p class="portfolio-category">App Development</p>
+                        <p style="color: white;">(Content in Progress)</p>
+                        <div class="portfolio-btns">
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="ui">
+                    <div class="portfolio-img" style="background-color: #2d4059; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-palette" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Banking Dashboard</h3>
+                        <p class="portfolio-category">UI/UX Design</p>
+                        <p style="color: white;">(Content in Progress)</p>
+                        <div class="portfolio-btns">
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img" style="background-color: #4a6fa5; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-utensils" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Restaurant Website</h3>
+                        <p class="portfolio-category">Web Design</p>
+                        <p style="color: white;">(Content in Progress)</p>
+                        <div class="portfolio-btns">
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-img" style="background-color: #ea5455; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-calendar-alt" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Task Manager App</h3>
+                        <p class="portfolio-category">App Development</p>
+                        <p style="color: white;">(Content in Progress)</p>
+                        <div class="portfolio-btns">
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="ui">
+                    <div class="portfolio-img" style="background-color: #f07b3f; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Analytics Dashboard</h3>
+                        <p class="portfolio-category">UI/UX Design</p>
+                        <p style="color: white;">(Content in Progress)</p>
+                        <div class="portfolio-btns">
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="#" class="portfolio-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preceptors Section -->
+    <section class="section preceptors" id="preceptors">
+        <div class="container">
+            <h2 class="section-title">Preceptors</h2>
+            
+            <div class="preceptors-container">
+                <div class="preceptors-item">
+                    <p class="preceptors-text">
+                        "Stay curious and never stop learning — the tech world evolves every day, and your passion is the key to keeping up. Embrace challenges as opportunities to grow, and remember, consistency and hard work always pave the way to success. Believe in your potential and keep pushing boundaries!"
+                    </p>
+                    <div class="preceptors-author">
+                        <div class="author-img">
+                            <img src="Assets\Aritra-Sir.jpeg" alt="Aritra Sir">
+                        </div>
+                        <div class="author-info">
+                            <h4>Aritra Kundu</h4>
+                            <p>Assistant Professor, Frontend Developer</p>
+                            <br>
+                            <hr>
+                            <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/aritra-kundu/')">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="preceptors-item">
+                    <p class="preceptors-text">
+                        "Embrace every challenge as an opportunity to learn and grow. Stay curious, keep updating your skills, and don’t be afraid to step out of your comfort zone. Remember, consistent effort and a positive mindset are the keys to success in both academics and life."
+                    </p>
+                    <div class="preceptors-author">
+                        <div class="author-img">
+                            <img src="Assets\Arijita-Ma'am.jpeg" alt="Arijita Ma'am">
+                        </div>
+                        <div class="author-info">
+                            <h4>Arijita Das Bhowmick</h4>
+                            <p>Assistant Professor, Experienced Soft Skills Faculty</p>
+                            <br>
+                            <hr>
+                            <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/arijita-das-bhowmick-802aa285/')">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="preceptors-item">
+                    <p class="preceptors-text">
+                        "Embrace continuous learning and stay curious — the tech world evolves fast, and adaptability is your greatest strength. Focus on building strong fundamentals, but don’t hesitate to explore new tools and frameworks. Remember, real growth comes from consistent effort and practical experience. Stay passionate and keep pushing your limits!"
+                    </p>
+                    <div class="preceptors-author">
+                        <div class="author-img">
+                            <img src="Assets\Abhisek-Sir.jpeg" alt="Abhisek Sir">
+                        </div>
+                        <div class="author-info">
+                            <h4>Abhisek Chakrabarty</h4>
+                            <p>Assistant Professor, Senior Software Developer</p>
+                            <br>
+                            <hr>
+                            <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/abhisek-chakrabarty-b7b16418/')">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preceptors-item">
+                    <p class="preceptors-text">
+                        "As you step into the world of learning and innovation, remember that curiosity is your greatest strength. Embrace challenges, ask bold questions, and never stop evolving. The future belongs to those who stay passionate and persistent."
+                    </p>
+                    <div class="preceptors-author">
+                        <div class="author-img">
+                            <img src="Assets\Sharbi-Ma'am.jpeg" alt="Sharbi Ma'am">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sharbi Banerjee</h4>
+                            <p>Assistant Professor, Experienced Soft Skills Faculty</p>
+                            <br>
+                            <hr>
+                            <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/sharbi-banerjee-2234481a2/')">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preceptors-item">
+                    <p class="preceptors-text">
+                        "As your preceptor, I believe learning is not just about gaining knowledge, but about applying it creatively and confidently. The digital world is evolving fast—stay curious, stay adaptable. Let’s turn challenges into opportunities and ideas into impact!"
+                    </p>
+                    <div class="preceptors-author">
+                        <div class="author-img">
+                            <img src="Assets\Brother.jpeg" alt="Brother">
+                        </div>
+                        <div class="author-info">
+                            <h4>Shibam Sadhukhan</h4>
+                            <p>Brother, DSA Developer</p>
+                            <br>
+                            <hr>
+                            <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/shibam008/')">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preceptors-item">
+                    <p class="preceptors-text">
+                        "Dear students, always remember — the digital world is shaped by those who dare to design and develop it. Be curious, keep experimenting, and never stop learning. Your creativity and code can change the future. Believe in your journey, because every great developer once started just where you are."
+                    </p>
+                    <div class="preceptors-author">
+                        <div class="author-img">
+                            <img src="Assets\Debabrata-Sir.jpeg" alt="Debabrata Sir">
+                        </div>
+                        <div class="author-info">
+                            <h4>Debabrata Barik</h4>
+                            <p>Assistant Professor, HOD of BCA Department in Eminet College of Management and Technology </p>
+                            <br>
+                            <hr>
+                            <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/debabratabarik/')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-title">Let's talk about everything</h3>
+                    <p class="mb-4">
+                        Don't like forms? Send me an email or connect with me on social media. 
+                        I'm always open to discussing new projects, creative ideas, or opportunities 
+                        to be part of your vision.
+                    </p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Gobardanga, North 24 Parganas, WB, IN</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>alphenjo9339321@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+91 76790 12265</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <img src="./Assets/Linkedin_image.png" alt="LinkedIn Profile" class="social-link" onclick="window.open('https://www.linkedin.com/in/sujoy-sadhukhan-321971360/')">
+                        <img src="./Assets/github_image.png" alt="Github Profile" class="social-link" onclick="window.open('https://github.com/Alphenjo/')">
+                        <img src="./Assets/youtube_image.png" alt="Youtube Channel" class="social-link" onclick="window.open('https://www.youtube.com/@alphenjo9339')">
+                        <img src="./Assets/instagram_image.png" alt="Instagram Id" class="social-link" onclick="window.open('https://www.instagram.com/alphenjo9339321/')">
+                        <img src="./Assets/discord_image.png" alt="Discord Server" class="social-link" onclick="window.open('https://discord.com/channels/1034142040260362251/1034142040876912712')">
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email id" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required=""></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Sujoy Sadhukhan Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 
     <script src="script.js"></script>
 </body>
