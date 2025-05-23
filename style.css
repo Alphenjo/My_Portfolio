@@ -569,12 +569,12 @@ img {
     color: var(--white-color);
 }
 
-/* Portfolio */
-.portfolio {
+/* Projects */
+.projects {
     background-color: var(--white-color);
 }
 
-.portfolio-filter {
+.projects-filter {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -597,27 +597,27 @@ img {
     color: var(--white-color);
 }
 
-.portfolio-container {
+.projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
-.portfolio-item {
+.projects-item {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
     position: relative;
 }
 
-.portfolio-img {
+.projects-img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     display: block;
 }
 
-.portfolio-overlay {
+.projects-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -633,11 +633,11 @@ img {
     transition: var(--transition);
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.projects-item:hover .projects-overlay {
     opacity: 1;
 }
 
-.portfolio-title {
+.projects-title {
     font-size: 1.5rem;
     color: var(--white-color);
     margin-bottom: 10px;
@@ -645,21 +645,21 @@ img {
     transition: var(--transition);
 }
 
-.portfolio-category {
+.projects-category {
     color: var(--secondary-color);
     margin-bottom: 20px;
     transform: translateY(20px);
     transition: var(--transition);
 }
 
-.portfolio-btns {
+.projects-btns {
     display: flex;
     gap: 15px;
     transform: translateY(20px);
     transition: var(--transition);
 }
 
-.portfolio-btn {
+.projects-btn {
     width: 40px;
     height: 40px;
     background-color: var(--white-color);
@@ -671,14 +671,14 @@ img {
     transition: var(--transition);
 }
 
-.portfolio-btn:hover {
+.projects-btn:hover {
     background-color: var(--secondary-color);
     color: var(--white-color);
 }
 
-.portfolio-item:hover .portfolio-title,
-.portfolio-item:hover .portfolio-category,
-.portfolio-item:hover .portfolio-btns {
+.projects-item:hover .projects-title,
+.projects-item:hover .projects-category,
+.projects-item:hover .projects-btns {
     transform: translateY(0);
 }
 

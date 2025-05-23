@@ -58,7 +58,7 @@ window.addEventListener('scroll', function() {
 });
 
 const filterBtns = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
+const projectsItems = document.querySelectorAll('.projects-item');
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
@@ -68,7 +68,7 @@ filterBtns.forEach(btn => {
         
         const filterValue = this.getAttribute('data-filter');
 
-        portfolioItems.forEach(item => {
+        projectsItems.forEach(item => {
             if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                 item.style.display = 'block';
             } else {
@@ -85,5 +85,15 @@ if (contactForm) {
         
         alert('Thank you for your message');
         contactForm.reset();
+    });
+}
+
+const clickLink = document.getElementById('clickLink');
+if (clickLink) {
+    clickLink.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        alert('Content in progress')
+        clickLink.reset();
     });
 }

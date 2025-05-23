@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My_Portfolio</title>
+    <title>Alphenjo | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,7 +19,7 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#insights" class="nav-link">Insights</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#preceptors" class="nav-link"> Preceptors </a></li>
                 </ul>
                 
@@ -248,127 +248,140 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="section portfolio" id="portfolio">
+    <!-- Project Section -->
+    <section class="section projects" id="projects">
         <div class="container">
-            <h2 class="section-title">My Portfolio</h2>
+            <h2 class="section-title">My Projects</h2>
             
-            <div class="portfolio-filter">
+            <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web">Web Design</button>
                 <button class="filter-btn" data-filter="app">App Development</button>
                 <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+                <button class="filter-btn" data-filter="college">College Projects</button>
             </div>
             
-            <div class="portfolio-container">
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-img" style="background-color: #ea5455; display: flex; align-items: center; justify-content: center;">
+            <div class="projects-container">
+                <div class="projects-item" data-category="web">
+                    <div class="projects-img" style="background-color: #ea5455; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-shopping-cart" style="font-size: 3rem; color: white;"></i>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">E-Commerce Website</h3>
-                        <p class="portfolio-category">Web Design</p>
-                        <p style="color: white;">(Content in Progress)</p>
-                        <div class="portfolio-btns">
-                            <a href="#" class="portfolio-btn">
+                    <div class="projects-overlay">
+                        <h3 class="projects-title">E-Commerce Website</h3>
+                        <p class="projects-category">Web Design</p>
+                        <div class="projects-btns">
+                            <a onclick="alert('Content in Progress')" class="projects-btn">
                                 <i class="fas fa-link"></i>
                             </a>
-                            <a href="#" class="portfolio-btn">
+                            <a href="https://www.awwwards.com/websites/e-commerce/" class="projects-btn">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="app">
-                    <div class="portfolio-img" style="background-color: #f07b3f; display: flex; align-items: center; justify-content: center;">
+                <div class="projects-item" data-category="college">
+                    <div class="projects-img" style="background-color: #79e67f; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-laptop" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="projects-overlay">
+                        <h3 class="projects-title">Computer Architecture</h3>
+                        <p class="projects-category">College Projects</p>
+                        <div class="projects-btns">
+                            <a onclick="window.open('CA.html')" class="projects-btn">
+                                <i class="fas fa-link"></i>
+                            </a>
+                            <a href="https://www.coursera.org/learn/comparch" class="projects-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="projects-item" data-category="app">
+                    <div class="projects-img" style="background-color: #f07b3f; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-mobile-alt" style="font-size: 3rem; color: white;"></i>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Weather App</h3>
-                        <p class="portfolio-category">App Development</p>
-                        <p style="color: white;">(Content in Progress)</p>
-                        <div class="portfolio-btns">
-                            <a href="#" class="portfolio-btn">
+                    <div class="projects-overlay">
+                        <h3 class="projects-title">Weather App</h3>
+                        <p class="projects-category">App Development</p>
+                        <div class="projects-btns">
+                            <a onclick="alert('Content in Progress')" class="projects-btn">
                                 <i class="fas fa-link"></i>
                             </a>
-                            <a href="#" class="portfolio-btn">
+                            <a href="https://windy.app/" class="projects-btn">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="ui">
-                    <div class="portfolio-img" style="background-color: #2d4059; display: flex; align-items: center; justify-content: center;">
+                <div class="projects-item" data-category="ui">
+                    <div class="projects-img" style="background-color: #2d4059; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-palette" style="font-size: 3rem; color: white;"></i>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Banking Dashboard</h3>
-                        <p class="portfolio-category">UI/UX Design</p>
-                        <p style="color: white;">(Content in Progress)</p>
-                        <div class="portfolio-btns">
-                            <a href="#" class="portfolio-btn">
+                    <div class="projects-overlay">
+                        <h3 class="projects-title">Banking Dashboard</h3>
+                        <p class="projects-category">UI/UX Design</p>
+                        <div class="projects-btns">
+                            <a onclick="alert('Content in Progress')" class="projects-btn">
                                 <i class="fas fa-link"></i>
                             </a>
-                            <a href="#" class="portfolio-btn">
+                            <a href="https://dribbble.com/tags/banking-dashboard" class="projects-btn">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-img" style="background-color: #4a6fa5; display: flex; align-items: center; justify-content: center;">
+                <div class="projects-item" data-category="web">
+                    <div class="projects-img" style="background-color: #4a6fa5; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-utensils" style="font-size: 3rem; color: white;"></i>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Restaurant Website</h3>
-                        <p class="portfolio-category">Web Design</p>
-                        <p style="color: white;">(Content in Progress)</p>
-                        <div class="portfolio-btns">
-                            <a href="#" class="portfolio-btn">
+                    <div class="projects-overlay">
+                        <h3 class="projects-title">Restaurant Website</h3>
+                        <p class="projects-category">Web Design</p>
+                        <div class="projects-btns">
+                            <a onclick="alert('Content in Progress')" class="projects-btn">
                                 <i class="fas fa-link"></i>
                             </a>
-                            <a href="#" class="portfolio-btn">
+                            <a href="https://www.awwwards.com/websites/hotel-restaurant/" class="projects-btn">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="app">
-                    <div class="portfolio-img" style="background-color: #ea5455; display: flex; align-items: center; justify-content: center;">
+                <div class="projects-item" data-category="app">
+                    <div class="projects-img" style="background-color: #ea5455; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-calendar-alt" style="font-size: 3rem; color: white;"></i>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Task Manager App</h3>
-                        <p class="portfolio-category">App Development</p>
-                        <p style="color: white;">(Content in Progress)</p>
-                        <div class="portfolio-btns">
-                            <a href="#" class="portfolio-btn">
+                    <div class="projects-overlay">
+                        <h3 class="projects-title">Task Manager App</h3>
+                        <p class="projects-category">App Development</p>
+                        <div class="projects-btns">
+                            <a onclick="alert('Content in Progress')" class="projects-btn">
                                 <i class="fas fa-link"></i>
                             </a>
-                            <a href="#" class="portfolio-btn">
+                            <a href="https://www.todoist.com/" class="projects-btn">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="ui">
-                    <div class="portfolio-img" style="background-color: #f07b3f; display: flex; align-items: center; justify-content: center;">
+                <div class="projects-item" data-category="ui">
+                    <div class="projects-img" style="background-color: #f07b3f; display: flex; align-items: center; justify-content: center;">
                         <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Analytics Dashboard</h3>
-                        <p class="portfolio-category">UI/UX Design</p>
-                        <p style="color: white;">(Content in Progress)</p>
-                        <div class="portfolio-btns">
-                            <a href="#" class="portfolio-btn">
+                    <div class="projects-overlay">
+                        <h3 class="projects-title">Analytics Dashboard</h3>
+                        <p class="projects-category">UI/UX Design</p>
+                        <div class="projects-btns">
+                            <a onclick="alert('Content in Progress')" class="projects-btn">
                                 <i class="fas fa-link"></i>
                             </a>
-                            <a href="#" class="portfolio-btn">
+                            <a href="https://www.geckoboard.com/dashboard-examples/marketing/web-analytics-dashboard/" class="projects-btn">
                                 <i class="fas fa-search"></i>
                             </a>
                         </div>
@@ -572,7 +585,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2025 Sujoy Sadhukhan Portfolio. All Rights Reserved. Thanks For Visiting.</p>
+            <p class="footer-text">© 2025 Sujoy Sadhukhan Portfolio. All Rights Reserved. Thanks For Visiting. • Last Updated: May 2025</p>
         </div>
     </footer>
 
